@@ -50,7 +50,7 @@ render(){
   
     return (
       <View style={{ backgroundColor: 'black'}}>
-        <View style={{ width: '100%', height: 80, backgroundColor: 'black', display:'flex', flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'space-between'}}>
+        <View style={{ width: '100%', height: 120, backgroundColor: 'black', display:'flex', flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'space-between'}}>
            <Button1/>
            <Text style = {styles.channelName}>{this.props.channelName}</Text>
            <Button2/>

@@ -287,7 +287,7 @@ render(){
         
         newsLink:{
             margin: 10,
-            fontSize: 20,
+            fontSize: 17,
             fontWeight: '900',
             color: 'rgb(155, 0, 0)'
         },
@@ -301,7 +301,7 @@ render(){
         },
 
         navbarWrap: {
-            marginTop: 10, 
+            marginTop: 15, 
             width: 200,
             borderWidth: 0.5,
             borderColor: 'black',
@@ -326,7 +326,7 @@ render(){
             backgroundColor: 'rgb(175, 0, 0)',
             borderWidth: 1,
             borderColor: 'rgb(141, 0, 0)',
-            margin: 5,
+            margin: 10,
         }
     })
 
