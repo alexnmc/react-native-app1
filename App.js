@@ -1,5 +1,5 @@
 import React from 'react'
-import Home from './Home'
+import Main from './Main'
 
 import ButtonProvider from './ButtonProvider'
 
@@ -7,7 +7,7 @@ import ButtonProvider from './ButtonProvider'
 const App = (props) => {
     return (
         <ButtonProvider>
-          <Home/>
+          <Main/>
         </ButtonProvider>
     )
 }

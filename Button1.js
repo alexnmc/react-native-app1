@@ -17,10 +17,11 @@ class Button1 extends Component{
   
         getNews = (url, name) => {
            this.props.getNewsCountry(url, name)
+           this.props.function()
         }
 
         
-        move = () => {
+        /*move = () => {
             this.state.left.setValue(-200)// reseting the animation
             this.props.editToggle()
             Animated.timing(this.state.left, {
@@ -28,21 +29,12 @@ class Button1 extends Component{
                duration:500,
                easing: Easing.linear
            }).start()
-        }
-    
+        }*/
         
 render(){
     return (
-        <View>
-            <TouchableOpacity onPress={() => this.move()} style = {styles.buttonCover}>
-                       <Text style = {styles.button}>Countries</Text>
-            </TouchableOpacity>
-               
-            {this.props.toggle ?
-             <View style = {styles.container}>
-             <Animated.View style = {[styles.navbarWrap, {left: this.state.left}]}>
+            <View style = {styles.container}>
                 <ScrollView>
-                   
                    <TouchableOpacity onPress={() => this.getNews('ar', 'Argentina')}>
                        <Text style = {styles.newsLink}>Argentina</Text>
                    </TouchableOpacity>
@@ -267,21 +259,11 @@ render(){
                    </TouchableOpacity>
 
                 </ScrollView>
-                </Animated.View>
                 </View>
                 
-                :
-                
-                 null
-            }
-            </View>
-
         )
     }
 }
-
-    
-    
 
     const styles = StyleSheet.create({
         
@@ -295,7 +277,7 @@ render(){
         container: {
             top: 40,
             height: height,
-            width: width,
+            width: 200,
             backgroundColor: 'black',
             position: 'absolute'
         },

@@ -14,18 +14,15 @@ import Loading from './Loading'
     this.myRef = React.createRef()
     this.state = {
     }
-}
+  }
   
-
-
   componentDidMount(){ 
     this.props.getNews()
   }
     
   scrolling = () => {
-    
     this.myRef.current.scrollTo({top: 0, behavior: 'smooth'})
-}
+ }
   
   
 render(){
@@ -50,11 +47,7 @@ render(){
   
     return (
       <View style={{ backgroundColor: 'black'}}>
-        <View style={{ width: '100%', height: 120, backgroundColor: 'black', display:'flex', flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'space-between'}}>
-           <Button1/>
-           <Text style = {styles.channelName}>{this.props.channelName}</Text>
-           <Button2/>
-        </View>
+        
         <ScrollView contentContainerStyle = {styles.body2} ref = {this.myRef}> 
         {this.props.loading === 'on' ?
           <Loading/>
@@ -123,8 +116,6 @@ const styles = StyleSheet.create({
     textAlign: 'center'
    
   }
-
-
 })
 
 export default withButton(Home)

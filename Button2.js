@@ -11,7 +11,7 @@ class Button2 extends Component{
       super()
       
       this.state = {
-        right: new Animated.Value(-200)
+        //right: new Animated.Value(-200)
       }
     }
 
@@ -20,27 +20,10 @@ class Button2 extends Component{
         }
 
         
-        move = () => {
-            this.state.right.setValue(-200)// reseting the animation
-            this.props.editToggle2()
-            Animated.timing(this.state.right, {
-               toValue:5,
-               duration:500,
-               easing: Easing.linear
-           }).start()
-        }
-    
-       
-render(){
+    render(){
     return (
-        <View>
-            <TouchableOpacity onPress={() => this.move()} style = {styles.buttonCover2}>
-                <Text style = {styles.button2}>Channels</Text>
-            </TouchableOpacity>
-               
-            {this.props.toggle2 ?
-             <View style = {styles.container2}>
-             <Animated.View style = {[styles.navbarWrap2, {right: this.state.right}]}>
+           <View style = {styles.container2}>
+            
                 <ScrollView>
                    
                    <TouchableOpacity onPress={() => this.getNews("axios", "Axios")}>
@@ -183,14 +166,11 @@ render(){
                    </TouchableOpacity>
                 
             </ScrollView>
-            </Animated.View>
+           
             </View>
                 
-                :
-                
-                 null
-            }
-            </View>
+               
+            
         )
     }
 }
@@ -218,10 +198,9 @@ render(){
         container2: {
             top: 40,
             height: height,
-            width: width,
+            width: 200,
             backgroundColor: 'black',
             position: 'absolute',
-            left:-223
         },
 
         button2:{
